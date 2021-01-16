@@ -4,6 +4,6 @@
 
 ##II - Les Pointeurs - Adresse Memoire
 
-![Representation de la Memoire](/Annexes/Representation de la Memoire.jpg)
+![Representation de la Memoire](images/Representation de la Memoire.jpg)
 
 ##III - Le problèmes des pointeurs en CSharp - Garbage Collector
