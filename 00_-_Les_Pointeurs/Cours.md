@@ -10,7 +10,7 @@ Cela diffère d’une variable d’un type référence, qui contient une référ
 Par défaut, lors de l' assignation, en passant un argument à une méthode et en retournant un résultat de méthode, les valeurs des variables sont copiées. 
 Dans le cas des variables de type valeur, les instances de type correspondantes sont copiées. L’exemple suivant illustre ce comportement :
 
-'''CSharp
+```csharp
 using System;
 
 public struct MutablePoint
@@ -43,7 +43,7 @@ public class Program
         Console.WriteLine($"Point mutated in a method: {p}");
     }
 }
-'''
+```
 
 ## II - Les Pointeurs - Adresse Memoire
 
