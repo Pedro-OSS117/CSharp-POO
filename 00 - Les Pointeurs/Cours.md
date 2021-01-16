@@ -1,7 +1,9 @@
-Les Pointeurs
+#Les Pointeurs
 
-I - Les Types Valeurs - Notion de copie
+##I - Les Types Valeurs - Notion de copie
 
-II - Les Pointeurs - Adresse Memoire
+##II - Les Pointeurs - Adresse Memoire
 
-III - Le problèmes des pointeurs en CSharp - Garbage Collector
+![Representation de la Memoire](/Annexes/Representation de la Memoire.jpg)
+
+##III - Le problèmes des pointeurs en CSharp - Garbage Collector
