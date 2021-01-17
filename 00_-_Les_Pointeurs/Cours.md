@@ -1,6 +1,7 @@
 # Les Pointeurs
 
 references :
+
 https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/unsafe-code-pointers/pointer-types
 
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/unsafe-code-pointers/pointer-types
@@ -66,14 +67,14 @@ namespace ProjetCours
             // p2 n'a pas été modifié car lors de l'appel de la methode une copie a été faite.
             Console.WriteLine($"Valeur {nameof(p1)} : {p1}");
             Console.WriteLine($"Valeur {nameof(p2)} : {p2}");
-		}
+	}
     }
 
-	private static void ModifyMyPointX(MyPoint p)
-	{
-		p.x = 100;
-		Console.WriteLine($"Point mutated in a method: {p}");
-	}
+    private static void ModifyMyPointX(MyPoint p)
+    {
+	p.x = 100;
+	Console.WriteLine($"Point mutated in a method: {p}");
+    }
 }
 ```
 
