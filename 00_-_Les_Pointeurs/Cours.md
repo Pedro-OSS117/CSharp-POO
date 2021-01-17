@@ -102,24 +102,24 @@ Exemple avec des pointeurs de type int
 int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
+### Exemples de declération avec des pointeurs
+Exemple	de declaration | Description
+-|-
+int* p | p est un pointeur vers un entier.
+int** p	| p est un pointeur vers un pointeur vers un entier.
+int*[] p | 	p est un tableau unidimensionnel de pointeurs vers des entiers.
+char* p |	p est un pointeur vers un caractère.
+void* p |	p est un pointeur vers un type inconnu.
 
-Exemple	Description
-int* p :	p est un pointeur vers un entier.
-int** p	: p est un pointeur vers un pointeur vers un entier.
-int*[] p : 	p est un tableau unidimensionnel de pointeurs vers des entiers.
-char* p :	p est un pointeur vers un caractère.
-void* p :	p est un pointeur vers un type inconnu.
-
-Operateurs utilisés pour les pointeurs : 
-
+### Operateurs utilisés pour les pointeurs : 
 Opérateur/Instruction | Utilisation
 ------------ | -------------
-*  | 	Exécute l'indirection de pointeur.
+&  | 	Obtient l'adresse d'une variable.
+\*  | 	Exécute l'indirection de pointeur.
 ->  | 	Accède à un membre d'un struct via un pointeur.
 []  | 	Indexe un pointeur.
-&  | 	Obtient l'adresse d'une variable.
 ++ et --  | 	Incrémente et décrémente les pointeurs.
-+ et -  | 	Exécute des opérations arithmétiques sur les pointeurs.
+\+ et -  | 	Exécute des opérations arithmétiques sur les pointeurs.
 
 Attention : Utiliser les pointeurs en CSharp n'est pas conseillé. C'est une notion très importante pour le C++ et le C.
 
