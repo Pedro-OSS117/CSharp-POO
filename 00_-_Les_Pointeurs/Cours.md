@@ -25,8 +25,8 @@ Type valeur peut être l’un des deux types suivants :
 - type __énumération__, qui est défini par un ensemble de constantes nommées et qui représente un choix ou une combinaison de choix
 
 Types valeur intégrés également appelés types simples:
-- Types __numériques intégraux__
-- Types __numériques à virgule flottante__
+- Types __numériques intégraux__ ou type entier (byte, short, int, long)
+- Types __numériques à virgule flottante__ ou type décimal (float, double, decimal)
 - __booléen__ qui représente une valeur booléenne
 - __char__ qui représente un caractère Unicode UTF-16
 
