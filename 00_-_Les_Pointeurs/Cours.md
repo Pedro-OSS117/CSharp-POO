@@ -8,7 +8,7 @@ https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/operators/poin
 
 https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/value-types
 
-## I - Les Types Valeurs - Notion de copie
+## I - Les Types Valeur - Notion de copie
 
 Les types valeur et les types référence sont les deux principales catégories de types C#. 
 Une variable d’un type valeur contient une instance du type. 
