@@ -3,7 +3,9 @@
 References :
 
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/unsafe-code-pointers/pointer-types
+
 https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/operators/pointer-related-operators
+
 https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/value-types
 
 ## I - Les Types Valeurs - Notion de copie
@@ -81,6 +83,7 @@ namespace ProjetCours
 ## II - Les Pointeurs - Adresse Memoire
 
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/unsafe-code-pointers/pointer-types
+
 https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/operators/pointer-related-operators
 
 Une variable prend X octets en mémoire, son adresse est l'adresse du premier octet alloué en mémoire.
@@ -90,7 +93,7 @@ Un __pointeur__ est une variable qui contient une adresse qui pointe vers une va
 Via un pointeur on peut accéder à la variable pointée.
 Plusieurs pointeur peuvent pointer vers la même variable. (Notion de référence)
 
-Declaration d'un pointeur : '*'
+### Declaration d'un pointeur : '*'
 Pour declarer
 
 ```csharp
