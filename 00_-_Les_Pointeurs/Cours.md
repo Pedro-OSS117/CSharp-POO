@@ -197,6 +197,13 @@ Pour pouvoir utiliser les pointeurs en CSharp il faut declarer les portées d'in
 Les portées unsafe ne sont pas gérées pas le Garbage Collector.
 https://docs.microsoft.com/fr-fr/dotnet/standard/garbage-collection/
 
+Pour pouvoir compiler un programme avec des pointeurs il faut ajouter dans le fichier de configuration .cproj la balise suivante :
+```csharp
+<PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+</PropertyGroup>
+```
+  
 Attention : Utiliser les pointeurs en CSharp n'est pas conseillé. C'est une notion très importante pour le C++ et le C.
 
 Deux mots clefs doivent être declarés dans votre programme pour pouvoir utiliser les pointeurs :
