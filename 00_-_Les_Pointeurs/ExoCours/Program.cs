@@ -11,14 +11,15 @@ Ecrire un programme
 
 2) Afficher les valeurs via les pointeurs
 
-3) Modifier les variables via les pointeurs et afficher les nouvelles valeurs
+3) Afficher les adresses via les pointeurs
 
+4) Modifier les variables via les pointeurs et afficher les nouvelles valeurs
 
-4) Ecrire une fonction qui prend en paramètre deux pointeurs de type int.
+5) Ecrire une fonction qui prend en paramètre deux pointeurs de type int.
 La fonction doit assigner la valeur de la variable pointé par le premier pointeur
 à la seconde variable pointé par le second pointeur.
 
-Appeler la fonction avec un pointeur sur la variable, et un pointeur sur le premier élément du tableau.
+Appeler la fonction avec le pointeur sur myValue, et un pointeur sur le premier élément du tableau.
 ***/
 
 namespace ExoCours

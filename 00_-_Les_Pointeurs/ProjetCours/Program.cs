@@ -45,7 +45,7 @@ namespace ProjetCours
             // p2 n'a pas été modifié car lors de l'appel de la methode une copie a été faite.
             Console.WriteLine($"Valeur {nameof(p1)} : {p1}");
             Console.WriteLine($"Valeur {nameof(p2)} : {p2}");
-            
+
             /// Les Pointeurs - Adresse Memoire
             Console.WriteLine("\n\n======== Les Pointeurs - Adresse Memoire ========\n");
 
@@ -62,7 +62,7 @@ namespace ProjetCours
 
             Console.WriteLine($"Adresse {nameof(pointerMyVariable1_1)} : {(long)pointerMyVariable1_1}");
             Console.WriteLine($"Adresse {nameof(pointerMyVariable1_2)} : {(long)pointerMyVariable1_2}\n");
-            
+
             Console.WriteLine($"Valeur {nameof(pointerMyVariable1_1)} : {*pointerMyVariable1_1}");
             Console.WriteLine($"Valeur {nameof(pointerMyVariable1_2)} : {*pointerMyVariable1_2}");
 
@@ -75,7 +75,7 @@ namespace ProjetCours
             MyPoint* pointerP1_1 = &p1;
             MyPoint* pointerP1_2 = &p1;
             MyPoint* pointerP2_1 = &p2;
-            
+
             Console.WriteLine($"Valeur struct p1 : {*pointerP1_1} et struct p2 {*pointerP2_1}");
 
             Console.WriteLine($"Adresse {nameof(pointerP1_1)} : {(long)pointerP1_1} \n"
@@ -91,6 +91,24 @@ namespace ProjetCours
             Console.WriteLine($"Après Modif \nValeur {nameof(pointerP1_1)} : {pointerP1_1->x} \n"
             + $"Valeur {nameof(pointerP1_2)} : {pointerP1_2->x}\n"
             + $"Valeur {nameof(pointerP2_1)} : {pointerP2_1->x}\n");
+
+            int[] tabValues = new int[] { 1, 2, 3 };
+            // Intialisation du pointeur sur le premier élément du tableau
+            // Création d'une portée '__fixed__' pour l'utilisation d'une pointeur sur tableau
+            fixed (int* firstElementPointer = &tabValues[0])
+            {
+                fixed (int* secondElementPointer = &tabValues[1])
+                {
+                    // Affichage de l'adresse du premier index
+                    Console.WriteLine($"Adresse {nameof(firstElementPointer)} : {(long)firstElementPointer}");
+                    // Affichage de l'adresse du second index
+                    Console.WriteLine($"Adresse {nameof(secondElementPointer)} : {(long)secondElementPointer}\n");
+                }
+
+                Console.WriteLine($"Adresse {nameof(firstElementPointer)} : {(long)firstElementPointer}");
+                // Utilisation de l'operateur + pour acceder à l'adresse du second element via le pointeur du premier
+                Console.WriteLine($"Adresse {nameof(firstElementPointer)} + 1 : {(long)(firstElementPointer + 1)}\n");
+            }
         }
 
         private static void ModifyMyPointX(MyPoint p)
@@ -102,7 +120,7 @@ namespace ProjetCours
         private unsafe void ModifyIntByPointer(int* value)
         {
             // On utilise le caractère '*' devant une variable pointeur
-            // pour acceder à la variable pointé.
+            // pour acceder à la variable pointée.
             // Ici on assigne à la variable pointé par le pointeur value, la valeur 10.
             *value = 10;
         }
