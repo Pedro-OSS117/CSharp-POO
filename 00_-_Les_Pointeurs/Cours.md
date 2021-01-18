@@ -20,6 +20,16 @@ https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/
 Par défaut, lors de l' assignation, en passant un argument à une méthode et en retournant un résultat de méthode, les valeurs des variables sont copiées. 
 Dans le cas des variables de type valeur, les instances de type correspondantes sont copiées. L’exemple suivant illustre ce comportement :
 
+Type valeur peut être l’un des deux types suivants :
+- type __structure__, qui encapsule les données et les fonctionnalités associées
+- type __énumération__, qui est défini par un ensemble de constantes nommées et qui représente un choix ou une combinaison de choix
+
+Types valeur intégrés également appelés types simples:
+- Types __numériques intégraux__
+- Types __numériques à virgule flottante__
+- __booléen__ qui représente une valeur booléenne
+- __char__ qui représente un caractère Unicode UTF-16
+
 ```csharp
 
 namespace ProjetCours
