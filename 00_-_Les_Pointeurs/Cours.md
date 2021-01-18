@@ -78,16 +78,17 @@ namespace ProjetCours
 }
 ```
 
+![Representation de la Memoire](/00_-_Les_Pointeurs/Annexes/Representation_de_la_Memoire.jpg)
+
 ## II - Les Pointeurs - Adresse Memoire
 
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/unsafe-code-pointers/pointer-types
 https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/operators/pointer-related-operators
 
-![Representation de la Memoire](/00_-_Les_Pointeurs/Annexes/Representation_de_la_Memoire.jpg)
-
 Une variable prend X octets en mémoire, son adresse est l'adresse du premier octet alloué en mémoire.
 Pour accéder à l'adresse d'une variable on utilise les pointeurs.
-Un pointeur est une variable qui contient une adresse qui pointe vers une variable en memoire.
+
+Un __pointeur__ est une variable qui contient une adresse qui pointe vers une variable en memoire.
 Via un pointeur on peut accéder à la variable pointée.
 Plusieurs pointeur peuvent pointé vers la même variable. (Notion de référence)
 
@@ -103,7 +104,7 @@ Exemple avec des pointeurs de type int
 int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
-### Exemples de declération avec des pointeurs
+### Exemples de declaration avec des pointeurs
 Exemple	de declaration | Description
 -|-
 int* p | p est un pointeur vers un entier.
@@ -122,7 +123,60 @@ Opérateur/Instruction | Utilisation
 ++ et --  | 	Incrémente et décrémente les pointeurs.
 \+ et -  | 	Exécute des opérations arithmétiques sur les pointeurs.
 
+### Initialiser un pointeur - Referencement d'une variable
+
+On utilise l'operateur '&' devant une variable pour l'initialiser
+```csharp
+// Declaration d'une variable i de type int
+int i = 0;
+// Declaration du pointeur p1 et 
+int* p1 = &i;
+```
+
+### Accès à la variable pointée
+
+On utilise l'opérateur '*' pour accéder à la variable pointé (référencé) par le pointeur
+
+```csharp
+// Affichage de la valeur de la variable i
+Console.WriteLine($"Valeur de i : {*p1}); 
+// Affichage de l'adresse de la variable i
+Console.WriteLine($"Valeur de i : {(long)p1});
+```
+
+### Tableau et Pointeur
+
+On peut référencer l'index d'un tableau.
+Les opérateurs arithmétiques sont utilisés pour avancer ou reculer dans l'indexation via un pointeur
+
+```csharp
+int[] tabValues = new int[] { 1, 2, 3 };
+// Intialisation du pointeur sur le premier élément du tableau
+// Création d'une portée '__fixed__' pour l'utilisation d'une pointeur sur tableau
+fixed (int* firstElementPointer = &tabValues[0])
+{
+    fixed (int* secondElementPointer = &tabValues[1])
+    {
+        // Affichage de l'adresse du premier index
+        Console.WriteLine($"Adresse {nameof(firstElementPointer)} : {(long)firstElementPointer}");
+        // Affichage de l'adresse du second index
+        Console.WriteLine($"Adresse {nameof(secondElementPointer)} : {(long)secondElementPointer}\n");
+    }
+
+    Console.WriteLine($"Adresse {nameof(firstElementPointer)} : {(long)firstElementPointer}");
+    // Utilisation de l'operateur + pour acceder à l'adresse du second element via le pointeur du premier
+    Console.WriteLine($"Adresse {nameof(firstElementPointer)} + 1 : {(long)(firstElementPointer + 1)}\n");
+}	    
+```
+## III - Le problèmes des pointeurs en CSharp - Garbage Collector
+
+Le __Garbage collector__ : gère l’allocation et la libération de mémoire pour votre application automatiquement.
+https://docs.microsoft.com/fr-fr/dotnet/standard/garbage-collection/
+
 Attention : Utiliser les pointeurs en CSharp n'est pas conseillé. C'est une notion très importante pour le C++ et le C.
 
+Deux mots clefs doivent être declarés dans votre programme pour pouvoir utiliser les pointeurs :
+- unsafe : à declarer dans la portée où un pointeur est utilisé.
+- fixed : à declarer lors de la création d'un pointeur 
 
-## III - Le problèmes des pointeurs en CSharp - Garbage Collector
+Les portées unsafe ne sont pas gérées pas le Garbage Collector.
