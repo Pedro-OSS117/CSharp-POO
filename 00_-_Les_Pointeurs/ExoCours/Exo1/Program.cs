@@ -5,7 +5,7 @@
 1) Declarer :
 - une variable "myValue" de type int avec une valeur.
 - un pointeur "myValuePointer" qui pointe sur cette variable.
-- un tableau "myTabValues" de 3 int avec des valeurs differentes assignées à chaque indexe.
+- un tableau "myTabValues" de 3 int avec des valeurs differentes assignées à chaque index.
 - un pointeur "myTabValuePointer" qui pointe sur le deuxième élément du tableau.
 
 2) Afficher les valeurs des variables via les pointeurs

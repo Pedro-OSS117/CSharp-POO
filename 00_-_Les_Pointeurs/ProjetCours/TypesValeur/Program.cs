@@ -30,11 +30,14 @@ namespace TypesValeur
             MyPoint point1 = new MyPoint();
             // Il y a copie de la valeur dans la nouvelle variable qui a son propre espace mémoire !!!!!
             MyPoint point2 = point1;
+
+            int val = 1;
+
             point2.x += 1;
             Console.WriteLine($"{nameof(point1)} : {point1.x} ");
             Console.WriteLine($"{nameof(point2)} : {point2.x} ");
 
-            MyMethodToModifyStruct(point2);
+            int value = MyMethodToModifyStruct(point2);
 
             Console.WriteLine($"{nameof(point2)} : {point2.x} ");
 
