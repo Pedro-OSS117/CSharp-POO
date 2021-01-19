@@ -23,11 +23,45 @@ Appeler la fonction avec le pointeur sur myValue, et un pointeur sur le premier 
 
 namespace ExoCours
 {
-    class Program
+    unsafe class Program
     {
-        static unsafe void Main(string[] args)
+        static void Main(string[] args)
         {
-            
+            int myValue = 10;
+            int* myValuePointer = &myValue;
+
+            int[] myTabValues = new int[]{ 1, 2, 3};
+            fixed(int* myTabValuePointer = &myTabValues[1])
+            {
+                Console.WriteLine($"{nameof(myValuePointer)} : {*myValuePointer} ");
+                Console.WriteLine($"{nameof(myTabValuePointer)} : {*myTabValuePointer} ");
+                Console.WriteLine($"Adress {nameof(myValuePointer)} : {(long)myValuePointer} ");
+                Console.WriteLine($"Adress {nameof(myTabValuePointer)} : {(long)myTabValuePointer} ");
+
+                *myValuePointer = 100;
+                *myTabValuePointer = 230;
+
+                Console.WriteLine($"{nameof(myValuePointer)} : {*myValuePointer} ");
+                Console.WriteLine($"{nameof(myTabValuePointer)} : {*myTabValuePointer} ");
+
+                // 1ere sol pour le 5)
+                AssignFromTo(myValuePointer, myTabValuePointer - 1);
+
+                Console.WriteLine($"{nameof(myTabValuePointer)} : {*(myTabValuePointer - 1)} ");
+
+                // 2eme sol pour le 5)
+                fixed(int* myTabValuePointer2 = &myTabValues[0])
+                {
+                    AssignFromTo(myValuePointer, myTabValuePointer2);
+                    Console.WriteLine($"{nameof(myTabValuePointer)} : {*myTabValuePointer2} ");
+                }
+
+            }
+        }
+
+        static void AssignFromTo(int* from, int* to)
+        {
+            *to = *from;
         }
     }
 }
