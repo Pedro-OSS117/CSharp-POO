@@ -1,17 +1,16 @@
 ﻿using System;
 
-/***
-Ecrire un programme 
+/*** Exo 1
 
 1) Declarer :
 - une variable "myValue" de type int avec une valeur.
 - un pointeur "myValuePointer" qui pointe sur cette variable.
-- un tableau "myTabValues" de 3 int avec des valeurs assignés.
+- un tableau "myTabValues" de 3 int avec des valeurs differentes assignées à chaque indexe.
 - un pointeur "myTabValuePointer" qui pointe sur le deuxième élément du tableau.
 
-2) Afficher les valeurs via les pointeurs
+2) Afficher les valeurs des variables via les pointeurs
 
-3) Afficher les adresses via les pointeurs
+3) Afficher les adresses des variables via les pointeurs
 
 4) Modifier les variables via les pointeurs et afficher les nouvelles valeurs
 
@@ -26,7 +25,7 @@ namespace ExoCours
 {
     class Program
     {
-        static void Main(string[] args)
+        static unsafe void Main(string[] args)
         {
             
         }
