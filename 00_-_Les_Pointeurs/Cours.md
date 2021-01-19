@@ -152,7 +152,7 @@ On utilise l'opérateur '*' pour accéder à la variable pointée (référencée
 // Affichage de la valeur de la variable i
 Console.WriteLine($"Valeur de i : {*p1});
 // Affichage de l'adresse de la variable i
-Console.WriteLine($"Valeur de i : {(long)p1});
+Console.WriteLine($"Adresse de i : {(long)p1});
 ```
 ### Structure et Pointeur
 
