@@ -4,7 +4,7 @@ Doit être sur vos GitHub avant 10h Lundi 25 Janvier sinon 0.
 -0.2 points à chaque erreur de nomenclature.
 0 sur l'exo si le programme ne compile pas.
 
-Attention : Commenter vos lignes de codes au maximum en respectant la nomenclature des commentaires.
+Attention : Commentez vos lignes de codes au maximum en respectant la nomenclature des commentaires (points en moins si pas de commentaire).
 
 Attention 2 : Pour un projet avec des pointeurs, ne pas oublier d'ajouter :
 - dans le .cproj de votre projet, la balise suivante : <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -31,7 +31,7 @@ Le résultat doit être 'O' et 'O'.
 
 1) Creer une structure Boss ayant les propriétés suivantes :
 - un nom
-- une vie sous forme d'entier (si la vie tombe a zero il est mort).
+- une vie sous forme d'entier (si la vie tombe à zero il est mort).
 - une protection (float) qui sera un multiplicateur des dégats reçus.
 
 2) La structure doit avoir un constructeur permettant de setter ces propriétés.
@@ -39,8 +39,9 @@ Le résultat doit être 'O' et 'O'.
 3) Dans la structure Boss, creer une fonction qui verifie si le boss est mort.
 
 4) Dans la structure Boss, creer une fonction qui permet d'attribuer des dégats au boss.
-Appliquer les degats en fonction de sa protection.
+Appliquer les degats en fonction de s'il n'est pas mort et de sa protection (on multiplie les degats par la protection).
 Cette fonction doit être public.
+Cette fonction retourne le nombre réél de degats appliqués.
 
 5) Dans la structure Boss, créer une fonction qui affiche l'état du boss (vie et protection)
 
