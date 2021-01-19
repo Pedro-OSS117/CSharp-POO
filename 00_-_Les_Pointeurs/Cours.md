@@ -146,11 +146,11 @@ int* p1 = &i;
 
 ### Accès à la variable pointée
 
-On utilise l'opérateur '*' pour accéder à la variable pointé (référencé) par le pointeur
+On utilise l'opérateur '*' pour accéder à la variable pointée (référencée) par le pointeur
 
 ```csharp
 // Affichage de la valeur de la variable i
-Console.WriteLine($"Valeur de i : {*p1}); 
+Console.WriteLine($"Valeur de i : {*p1});
 // Affichage de l'adresse de la variable i
 Console.WriteLine($"Valeur de i : {(long)p1});
 ```
