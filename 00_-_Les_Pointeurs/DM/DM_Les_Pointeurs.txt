@@ -30,7 +30,6 @@ Le résultat doit être 'O' et 'O'.
 ===================== Exo 2 - Boss And Player =====================
 
 1) Creer une structure Boss ayant les propriétés suivantes :
-- un nom
 - une vie sous forme d'entier (si la vie tombe à zero il est mort).
 - une protection (float) qui sera un multiplicateur des dégats reçus.
 
@@ -54,7 +53,7 @@ Cette fonction retourne le nombre réél de degats appliqués.
 
 8) Dans la structure Player, creer une fonction 'Attack' qui permet d'appliquer des dégats au Boss pointé par la propriété de type pointeur.
 La fonction utilise les dégats de la propriété de la structure.
-La fonction affiche à chaque attaque : "Le Player {NomPlayer} a blessé le Boss {NomBoss} de {dégats}".
+La fonction affiche à chaque attaque : "Le Player {NomPlayer} a blessé le Boss de {dégats}".
 
 9) Utiliser ces deux structures pour faire un programme qui :
 - Creer une variable de type Boss.
