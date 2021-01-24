@@ -40,7 +40,7 @@ Au moment de l’exécution, quand vous déclarez une variable de type référen
 tant que vous n’avez pas explicitement créé une instance de la classe à l’aide de l’opérateur new, 
 ou que vous ne lui avez pas assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
 
-```
+```csharp
 //Declaring an object of type MyClass.
 MyClass mc = new MyClass();
 
@@ -55,7 +55,7 @@ Si dans une portée il n'y plus de référence alors l'instance sera detruite pa
 
 ### 1 - Declaration de la Class == Nouveau Type 
 
-```
+```csharp
 // Dans un fichier Person.cs
 // Declaration du nouveau type Person
 class Person
@@ -157,7 +157,7 @@ Un constructeur a comme signature :
 public class MyClass
 {
     private string _propsMember;
-    
+
     // Constructeur avec paramètres et intialisation de propriétés
     public MyClass(string propsValue)
     {
@@ -167,10 +167,12 @@ public class MyClass
 }
 ```
 
-
 ### 4 - Methodes
 
 ### 5 - Variables et Fonctions static d'une classe
+Accessible à l'éxécutioin dès que le type est chargé.
+Pas besoin d'instance pour être utilisées
+On utilise le nom de la classe pour les appeler.
 
 ## IV - Encapsulation et Accesseurs
 https://docs.microsoft.com/fr-fr/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
