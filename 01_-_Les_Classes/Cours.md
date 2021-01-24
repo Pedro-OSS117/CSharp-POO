@@ -27,11 +27,11 @@ Par contre les structures pourront être utilisées pour des concepts d'objet si
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/classes
 
-### Création d'une Classe == Creation d'une type 
+### 1- Concept d'une Classe - Création d'une Classe == Creation d'une type 
 
 
 
-### Instance d'une classe -  Type Référence - Null
+### 2 - Instance d'une Classe -  Type Référence - Null
 
 Lorsqu'on utilise le mot clef 'new' on créé une instance du type de la class.
 
