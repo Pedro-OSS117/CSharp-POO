@@ -53,7 +53,7 @@ Si dans une portée il n'y plus de référence alors l'instance sera detruite pa
 
 ## III - Créér une Classe - Constructeur et Propriétes Membres
 
-### Declaration de la Class == Nouveau Type 
+### 1 - Declaration de la Class == Nouveau Type 
 
 ```
 // Dans un fichier Person.cs
@@ -77,13 +77,13 @@ public class Program
 Tous ce qui est déclaré dans la portée de la classe Person, sera accessible uniquement via le type Person.
 En général on a : un fichier .cs == 1 class.
 
-### Classe Interne
+#### Classe Interne
 
 Il est tout de même possible de créer plusieurs classe dans un même fichier.
 Il est possible aussi de créer une classe dans une classe.
 Elle sera dite interne à la Classe et ne pourrat être instancier qu'au travers de la classe qui la contient.
 
-```
+```csharp
 public class Program
 {
 	static void Main(string[] args)
@@ -107,17 +107,70 @@ public class Person
 }
 ```
 
-### Propriétés Membres
+### 2 - Propriétés Membres
 
-### Constructeurs
+Lorsqu'on défini une classe en général on lui ajoute des propriétés.
+Convention : Ces propriétés dites membres sont déclarées juste en dessous du nom de la classe.
+Nomenclature : '_' devant le nom de la propriété, celà permet de savoir que c'est une propriété quand elle est utilisée ailleurs dans le code.
+
+Les propriétés sont des données définissants la class.
+Lorsqu'on décide d'ajouter des propriétés à une classe il faut suivre le principe d'encapsulation.
+    
+```csharp
+public class MyClass
+{
+    // -------- Ici on déclare les propriétés membres de la classe
+    // Nomenclature => '_' devant le nom de la propriété.
+    private string _propsMember;
+    
+    // -------- Ici on déclare les propriétés membres de la classe
+}
+```
+
+### 3 - Constructeurs
 
 Lorsqu'on utilise le mot clef 'new' pour instancier une classe, on appelle en fait un Constructeur.
-###
+
+#### Constructeur par defaut
+Il y a toujours un constructeur par defaut pour une classe même si aucun constructeur n'est déclaré.
+On peut donc créer une instance d'une classe avec el mot clef 'new' même si aucun constructeur n'est déclaré.
+L'instance de la classe aura alors toutes ses propriétés intialisées par des valeurs par defaut.
+On peut déclarer et implementer le constructeur par defaut pour qu'à la création un conmportement particulié soit executer.
+Le constructeur par defaut est celui sans paramètres.
+```csharp
+public class MyClass
+{
+    private string _propsMember;
+    
+    // Constructeur par defaut surchargé
+    public MyClass()
+    {
+        Console.WriteLine("Bonjour, je suis une instance de my class et je viens d'être créée via le constructeur par defaut");
+    }
+}
+```
+
+#### Constructeur
+Un constructeur a comme signature :
+
+```csharp
+public class MyClass
+{
+    private string _propsMember;
+    
+    // Constructeur avec paramètres et intialisation de propriétés
+    public MyClass(string propsValue)
+    {
+        _propsMember = propsValue;
+        Console.WriteLine("Bonjour, je suis une instance de my class et je viens d'être créé via un constructeur");
+    }
+}
+```
 
 
-### Methodes
+### 4 - Methodes
 
-### Variables et Fonctions static d'une classe
+### 5 - Variables et Fonctions static d'une classe
 
 ## IV - Encapsulation et Accesseurs
 https://docs.microsoft.com/fr-fr/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
