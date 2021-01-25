@@ -16,18 +16,20 @@ Lorsqu'on créé une variable de type Classes, cette variable sera obligatoireme
 Les Classes sont de Type Réference contrairement aux Structures qui sont de Type Valeur.
 
 ### Classes VS Structures
+
 La notion de Classe va permettre de mieux structurer nos programmes en "Concept".
-Et aussi utiliser la notion de référence sans avoir besoin des pointeurs.
+On va utiliser la notion de référence sans avoir besoin des pointeurs.
+
 On a vu que pour pouvoir faire des références lorsqu'on utilise des structures il faut des pointeurs.
-Or en CSharp la memoire est gérée par le Garbage Collector et il ne gère pas les Pointeurs.
-D'où le fait d'utiliser exclusivement les Classes pour organiser nos programmes.
+Or en CSharp la memoire est gérée par le Garbage Collector et il ne gère pas les Pointeurs (unsafe).
+D'où le fait d'utiliser au maximum les Classes pour organiser nos programmes.
 Par contre les structures pourront être utilisées pour des concepts d'objet simple comme par exemple le 'Vector3'.
 
 ## II - Les Classes - Notion de Concept et d'Instance
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/classes
 
-### 1- Concept d'une Classe - Création d'une Classe == Creation d'une type 
+### 1 - Concept d'une Classe - Création d'une Classe == Creation d'une type 
 
 
 
