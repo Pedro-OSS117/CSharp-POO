@@ -6,24 +6,34 @@ References :
 
 ## I - Des Pointeurs aux Classes
 
+Les Pointeurs ont apporté la notion de référence dans la Programmation Impérative.
 La notion de référence est devenue indispensable pour pouvoir faire des programmes de plus en plus complexes.
-Les besoins des programmeurs :
-- Programme bien conçus pour une bonee compréhension des concepts présents dans le programme
-- Programme facile à maintenir et à etandre 
-- Programme performant, autant lors execution qu'au niveau de la gestion de la memoire.
+Lorsqu'on créé des programmes ils doivent être :
+- bien conçus pour une bonne compréhension des concepts présents dans le programme,
+- facile à maintenir et à améliorer, 
+- performant, autant lors execution qu'au niveau de la gestion de la memoire.
 
+Les Classes sont le coeur de la programmation orientée objet. Elles utilisent le principe de référence et sont pensées pour faciliter les points cités ci-dessus.
 Lorsqu'on créé une variable de type Classes, cette variable sera obligatoirement une reference vers l'instance créée.
-Les Classes sont de Type Réference contrairement aux Structures qui sont de Type Valeur.
+
+Le C# est un langage orienté objet. Quatre des techniques clés utilisées dans la programmation orientée objet sont les suivantes :
+- L'__abstraction__ signifie masquer les détails inutiles des consommateurs de type.
+- L’__encapsulation__ signifie qu’un groupe de propriétés, méthodes et autres membres corrélés est traité comme une unité ou un objet unique.
+- L’__héritage__ décrit la possibilité de créer des classes à partir d’une classe existante.
+- Le __polymorphisme__ signifie que plusieurs classes peuvent être utilisées de manière interchangeable, même si chacune des classes implémente les mêmes propriétés ou méthodes de manière différente.
 
 ### Classes VS Structures
 
 La notion de Classe va permettre de mieux structurer nos programmes en "Concept".
+Les Classes sont de Type Réference contrairement aux Structures qui sont de Type Valeur.
 On va utiliser la notion de référence sans avoir besoin des pointeurs.
 
-On a vu que pour pouvoir faire des références lorsqu'on utilise des structures il faut des pointeurs.
+On a vu que pour pouvoir faire des références lorsqu'on utilise des types valeurs il faut des pointeurs.
 Or en CSharp la memoire est gérée par le Garbage Collector et il ne gère pas les Pointeurs (unsafe).
-D'où le fait d'utiliser au maximum les Classes pour organiser nos programmes.
+D'où le fait d'utiliser au maximum les Classes pour organiser nos programmes en POO.
 Par contre les structures pourront être utilisées pour des concepts d'objet simple comme par exemple le 'Vector3'.
+
+De plus grâces aux differentes techniques qu'ajoute la POO et qui dépendent des classes ont va pouvoir aller beaucoup plus loin dans la conception de nos programmes.
 
 ## II - Les Classes - Notion de Concept et d'Instance
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
@@ -95,7 +105,7 @@ public class Program
 
 public class Person
 {
-	// Classe interne private (ne peut pas être instancier hors de la classe Person)
+	// Classe interne private (ne peut pas être instancié hors de la classe Person)
 	class InternalPersonPrivate
 	{
 
@@ -179,8 +189,12 @@ On utilise le nom de la classe pour les appeler.
 ## IV - Encapsulation et Accesseurs
 https://docs.microsoft.com/fr-fr/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
 https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
+https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
 
-### private, public
+### Accessibilité private, public
+Certaines méthodes et propriétés sont censées être appelées ou accessibles par le code qui se trouve à l’extérieur de votre classe ou de votre struct, connu sous le terme de code client. D’autres méthodes et propriétés peuvent être uniquement utilisables dans la classe ou le struct proprement dits. Il est important de limiter l’accessibilité de votre code afin que seul le code client prévu puisse y accéder. Vous pouvez spécifier l’accessibilité de vos types et de leurs membres vis-à-vis du code client à l’aide des modificateurs d’accès public, protected, internal, protected internal, private et private protected. L’accessibilité par défaut est private. Pour plus d’informations, consultez Modificateurs d’accès.
+
+### Encapsulation
 L’encapsulation est parfois considérée comme le premier pilier ou principe de la programmation orientée objet. 
 D'après le principe d'encapsulation, une classe ou un struct peut spécifier le degré d'accessibilité de chacun 
 de ses membres au code situé en dehors de la classe ou du struct. Les méthodes et variables qui ne sont pas 
