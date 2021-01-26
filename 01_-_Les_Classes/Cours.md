@@ -80,7 +80,7 @@ MyClass mc2 = mc;
 Il est possible d'avoir plusieurs référence vers une même instance.
 Si dans une portée il n'y plus de référence alors l'instance sera detruite par le garbage collector, sinon elle reste en mémoire.
 
-## III - Créér une Classe - Constructeur et Propriétes Membres
+## III - Créér une Classe
 
 ### 1 - Declaration de la Class == Nouveau Type 
 
@@ -135,7 +135,7 @@ public class Person
 }
 ```
 
-### 2 - Propriétés Membres
+### 2 - Propriétés
 
 Lorsqu'on défini une classe en général on lui ajoute des propriétés.
 Convention : Ces propriétés dites membres sont déclarées juste en dessous du nom de la classe.
