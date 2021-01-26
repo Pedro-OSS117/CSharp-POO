@@ -46,7 +46,7 @@ __Attention__
 
 La classe et l’objet sont des concepts liés mais intrinsèquement différents. Par exemple, prenons un objet réel comme une voiture. Le modèle numérique de la voiture décrit sa forme, ses fonctions, comment elle doit être fabriquée. Ce modèle n’est pas une voiture. De la même manière une classe n’est pas un objet.
 
-![René Magritte "La Trahison des Images"](01_-_Les_Classes/Annexes/ceci-nest-pas-une-pipe.jpg)
+![René Magritte "La Trahison des Images"](/01_-_Les_Classes/Annexes/ceci-nest-pas-une-pipe.jpg)
 
 ### 2 - Instance d'une Classe -  Type Référence - Null
 
@@ -113,24 +113,22 @@ Elle sera dite interne à la Classe et ne pourrat être instancier qu'au travers
 ```csharp
 public class Program
 {
-	static void Main(string[] args)
-	{
-	}
+    static void Main(string[] args)
+    {
+    }
 }
 
 public class Person
 {
-	// Classe interne private (ne peut pas être instancié hors de la classe Person)
-	class InternalPersonPrivate
-	{
+    // Classe interne private (ne peut pas être instancié hors de la classe Person)
+    class InternalPersonPrivate
+    {
+    }
 
-	}
-	
-	// Classe interne public
-	public class InternalPerson
-	{
-
-	}
+    // Classe interne public
+    public class InternalPerson
+    {
+    }
 }
 ```
 
@@ -224,15 +222,15 @@ Les parties get et set d’une propriété ou d’un indexeur sont appelées acc
 ```csharp
 public class MyClass
 {
-	// Nomenclature => '_' devant le nom de la propriété.
-	private string _propsMember;
+    // Nomenclature => '_' devant le nom de la propriété.
+    private string _propsMember;
 
-	// Accesseur de la propriété _propsMember
-	public string PropsMember
-	{
-	    get { return _propsMember; }
-	    set { _propsMember = value; }
-	}
+    // Accesseur de la propriété _propsMember
+    public string PropsMember
+    {
+       get { return _propsMember; }
+       set { _propsMember = value; }
+    }
 }
 
 class Program
