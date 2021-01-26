@@ -46,6 +46,10 @@ __Attention__
 
 La classe et l’objet sont des concepts liés mais intrinsèquement différents. Par exemple, prenons un objet réel comme une voiture. Le modèle numérique de la voiture décrit sa forme, ses fonctions, comment elle doit être fabriquée. Ce modèle n’est pas une voiture. De la même manière une classe n’est pas un objet.
 
+![René Magritte « La Trahison des Images »](01_-_Les_Classes/Annexes/ceci-nest-pas-une-pipe.jpg)
+
+![Classes et Instances](/01_-_Les_Classes/Annexes/ClasseEtInstance.jpg)
+
 ### 2 - Instance d'une Classe -  Type Référence - Null
 
 Lorsqu'on créé une variable de type 'class', cette variable sera obligatoirement une reference vers l'instance créée.
