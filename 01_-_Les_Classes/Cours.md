@@ -3,6 +3,9 @@
 References : 
 
 - https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
+- https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/classes
+- https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
+- https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility
 
 ## I - Des Pointeurs aux Classes
 
@@ -24,7 +27,7 @@ Le C# est un langage orienté objet. Quatre des techniques clés utilisées dans
 ### Classes VS Structures
 
 La notion de Classe va permettre de mieux structurer nos programmes en "Concept".
-Les Classes sont de Type Réference contrairement aux Structures qui sont de Type Valeur.
+Les Classes sont de __Type Réference__ contrairement aux Structures qui sont de Type Valeur.
 Via les classes on va utiliser la notion de référence sans avoir besoin des pointeurs.
 
 On a vu que pour pouvoir faire des références lorsqu'on utilise des types valeurs il faut des pointeurs.
@@ -50,15 +53,15 @@ La classe et l’objet sont des concepts liés mais intrinsèquement différents
 
 ### 2 - Instance d'une Classe -  Type Référence - Null
 
-Lorsqu'on créé une variable de type 'class', cette variable sera obligatoirement une reference vers l'instance créée.
-Lorsqu'on utilise le mot clef 'new' on créé une instance du type de la class.
+Lorsqu'on créé une variable de type '__class__', cette variable sera obligatoirement une reference vers l'instance créée.
+Lorsqu'on utilise le mot clef '__new__' on créé une instance du type de la class.
 On parle aussi d'objet : instance d'une classe == objet d'une classe.
-Un type défini comme class est un type référence. 
+Un type défini comme __class__ est un type référence. 
 
 ![Classes et Instances](/01_-_Les_Classes/Annexes/ClasseEtInstance.jpg)
 
-Au moment de l’exécution, quand on déclare une variable de type référence, celle-ci contient la valeur Null 
-tant qu'on a pas explicitement créé une instance de la classe à l’aide de l’opérateur new, 
+Au moment de l’exécution, quand on déclare une variable de type référence, celle-ci contient la valeur __Null__
+tant qu'on a pas explicitement créé une instance de la classe à l’aide de l’opérateur __new__, 
 ou qu'on ai assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
 
 ```csharp
@@ -138,7 +141,7 @@ Lorsqu'on défini une classe en général on lui ajoute des propriétés.
 Convention : Ces propriétés dites membres sont déclarées juste en dessous du nom de la classe.
 Nomenclature : '_' devant le nom de la propriété, celà permet de savoir que c'est une propriété quand elle est utilisée ailleurs dans le code.
 
-Les propriétés sont des données définissants la class.
+Les propriétés sont des données définissants la classe.
 Lorsqu'on décide d'ajouter des propriétés à une classe il faut suivre le principe d'encapsulation.
     
 ```csharp
@@ -154,7 +157,7 @@ public class MyClass
 
 ### 3 - Constructeurs
 
-Lorsqu'on utilise le mot clef 'new' pour instancier une classe, on appelle en fait un Constructeur.
+Lorsqu'on utilise le mot clef '__new__' pour instancier une classe, on appelle en fait un Constructeur.
 
 #### Constructeur par defaut
 Il y a toujours un constructeur par defaut pour une classe même si aucun constructeur n'est déclaré.
@@ -204,6 +207,12 @@ public class MyClass
     {
         _propsMember = propsValue;
         Console.WriteLine("Bonjour, je suis une instance de my class et je viens d'être créé via un constructeur");
+    }
+    
+    // [Accessibilité] [Type retour] [Identifiant] [Parametres]
+    public void MyMethod(int param1, float param2)
+    {
+        // Do Something
     }
 }
 ```
