@@ -194,6 +194,20 @@ public class MyClass
 
 ### 4 - Methodes
 
+```csharp
+public class MyClass
+{
+    private string _propsMember;
+
+    // Constructeur avec paramètres et intialisation de propriétés
+    public MyClass(string propsValue)
+    {
+        _propsMember = propsValue;
+        Console.WriteLine("Bonjour, je suis une instance de my class et je viens d'être créé via un constructeur");
+    }
+}
+```
+
 ### 5 - Variables et Fonctions static d'une classe
 Accessible à l'éxécutioin dès que le type est chargé.
 Pas besoin d'instance pour être utilisées
