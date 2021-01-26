@@ -14,7 +14,6 @@ Lorsqu'on créé des programmes ils doivent être :
 - performant, autant lors execution qu'au niveau de la gestion de la memoire.
 
 Les Classes sont le coeur de la programmation orientée objet. Elles utilisent le principe de référence et sont pensées pour faciliter les points cités ci-dessus.
-Lorsqu'on créé une variable de type Classes, cette variable sera obligatoirement une reference vers l'instance créée.
 
 Le C# est un langage orienté objet. Quatre des techniques clés utilisées dans la programmation orientée objet sont les suivantes :
 - L'__abstraction__ signifie masquer les détails inutiles des consommateurs de type.
@@ -26,26 +25,32 @@ Le C# est un langage orienté objet. Quatre des techniques clés utilisées dans
 
 La notion de Classe va permettre de mieux structurer nos programmes en "Concept".
 Les Classes sont de Type Réference contrairement aux Structures qui sont de Type Valeur.
-On va utiliser la notion de référence sans avoir besoin des pointeurs.
+Via les classes on va utiliser la notion de référence sans avoir besoin des pointeurs.
 
 On a vu que pour pouvoir faire des références lorsqu'on utilise des types valeurs il faut des pointeurs.
 Or en CSharp la memoire est gérée par le Garbage Collector et il ne gère pas les Pointeurs (unsafe).
 D'où le fait d'utiliser au maximum les Classes pour organiser nos programmes en POO.
 Par contre les structures pourront être utilisées pour des concepts d'objet simple comme par exemple le 'Vector3'.
 
-De plus grâces aux differentes techniques qu'ajoute la POO et qui dépendent des classes ont va pouvoir aller beaucoup plus loin dans la conception de nos programmes.
+De plus grâces aux differentes techniques qu'ajoute la POO et qui dépendent des classes on va pouvoir aller beaucoup plus loin dans l'organisation et la conception de nos programmes.
 
 ## II - Les Classes - Notion de Concept et d'Instance
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/classes
 
-### 1 - Concept d'une Classe - Création d'une Classe == Creation d'une type 
+### 1 - Concept d'une Classe - Création d'une Classe == Creation d'un nouveau type 
 
+En dehors des types de base comme les types numériques, il vous est possible de créer ou d’utiliser d’autres types de données à l’intérieur de vos programmes. Ces types plus complexes seront désignés sous le terme de classes. Dit autrement, une classe est une description d’un nouveau type de données. Tout comme pour le type int, une classe est unique mais permet de créer (ou instancier), plusieurs objets (ou instances).
 
+__Attention__
+
+La classe et l’objet sont des concepts liés mais intrinsèquement différents. Par exemple, prenons un objet réel comme une voiture. Le modèle numérique de la voiture décrit sa forme, ses fonctions, comment elle doit être fabriquée. Ce modèle n’est pas une voiture. De la même manière une classe n’est pas un objet.
 
 ### 2 - Instance d'une Classe -  Type Référence - Null
 
+Lorsqu'on créé une variable de type 'class', cette variable sera obligatoirement une reference vers l'instance créée.
 Lorsqu'on utilise le mot clef 'new' on créé une instance du type de la class.
+On parle aussi d'objet : instance d'une classe == objet d'une class.
 
 Un type défini comme class est un type référence. 
 Au moment de l’exécution, quand vous déclarez une variable de type référence, celle-ci contient la valeur Null 
@@ -53,10 +58,15 @@ tant que vous n’avez pas explicitement créé une instance de la classe à l�
 ou que vous ne lui avez pas assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
 
 ```csharp
-//Declaring an object of type MyClass.
+// Declaring a reference setted to null. 
+// c point to nothing.
+MyClass c = null;
+
+// Declaring and instanciate an object of type MyClass.
 MyClass mc = new MyClass();
 
-//Declaring another object of the same type, assigning it the value of the first object.
+// Declaring another variable of the same type, assigning it the value of the first object.
+// mc2 and mc point to the same object
 MyClass mc2 = mc;
 ```
 
@@ -70,7 +80,8 @@ Si dans une portée il n'y plus de référence alors l'instance sera detruite pa
 ```csharp
 // Dans un fichier Person.cs
 // Declaration du nouveau type Person
-class Person
+//[access modifier] - [class] - [identifier]
+public class Person
 {
 	
 }
@@ -80,7 +91,7 @@ public class Program
 {
 	static void Main(string[] args)
 	{
-		// Creation d'une instance de la classe (Instatiation)
+		// Creation d'une instance de la classe (Instantiation)
 		Person person = new Person();
 	}
 }
@@ -191,9 +202,6 @@ https://docs.microsoft.com/fr-fr/dotnet/csharp/tutorials/intro-to-csharp/object-
 https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
 
-### Accessibilité private, public
-Certaines méthodes et propriétés sont censées être appelées ou accessibles par le code qui se trouve à l’extérieur de votre classe ou de votre struct, connu sous le terme de code client. D’autres méthodes et propriétés peuvent être uniquement utilisables dans la classe ou le struct proprement dits. Il est important de limiter l’accessibilité de votre code afin que seul le code client prévu puisse y accéder. Vous pouvez spécifier l’accessibilité de vos types et de leurs membres vis-à-vis du code client à l’aide des modificateurs d’accès public, protected, internal, protected internal, private et private protected. L’accessibilité par défaut est private. Pour plus d’informations, consultez Modificateurs d’accès.
-
 ### Encapsulation
 L’encapsulation est parfois considérée comme le premier pilier ou principe de la programmation orientée objet. 
 D'après le principe d'encapsulation, une classe ou un struct peut spécifier le degré d'accessibilité de chacun 
@@ -201,4 +209,36 @@ de ses membres au code situé en dehors de la classe ou du struct. Les méthodes
 destinées à être utilisées d’en dehors de la classe ou de l’assembly peuvent être masquées afin de limiter 
 le risque d’erreurs ou de code malveillant exploitant une faille de sécurité.
 
+### Accessibilité private, public
+Certaines méthodes et propriétés sont censées être appelées ou accessibles par le code qui se trouve à l’extérieur de votre classe ou de votre struct, connu sous le terme de code client. D’autres méthodes et propriétés peuvent être uniquement utilisables dans la classe ou le struct proprement dits. Il est important de limiter l’accessibilité de votre code afin que seul le code client prévu puisse y accéder. Vous pouvez spécifier l’accessibilité de vos types et de leurs membres vis-à-vis du code client à l’aide des modificateurs d’accès public, protected, internal, protected internal, private et private protected. L’accessibilité par défaut est private. Pour plus d’informations, consultez Modificateurs d’accès.
+
 ### Accesseurs
+https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility
+
+Les parties get et set d’une propriété ou d’un indexeur sont appelées accesseurs. Par défaut, ces accesseurs ont la visibilité ou le niveau d’accès de la propriété ou de l’indexeur auquel ils appartiennent. Pour plus d’informations, consultez Niveaux d’accessibilité. Toutefois, il peut parfois s’avérer utile de restreindre l’accès à l’un de ces accesseurs. En général, cela implique de restreindre l’accessibilité de l’accesseur set, tout en gardant l’accesseur get publiquement accessible. Par exemple :
+
+```csharp
+public class MyClass
+{
+	// Nomenclature => '_' devant le nom de la propriété.
+	private string _propsMember;
+
+	// Accesseur de la propriété _propsMember
+	public string PropsMember
+	{
+	    get { return _propsMember; }
+	    set { _propsMember = value; }
+	}
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {    
+        MyClass refMyClassInstance = new MyClass();
+	
+	// Appel de l'accesseur
+        refMyClassInstance.PropsMember = "NewValue";
+    }
+}
+```
