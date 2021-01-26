@@ -16,8 +16,8 @@ Lorsqu'on créé des programmes ils doivent être :
 Les Classes sont le coeur de la programmation orientée objet. Elles utilisent le principe de référence et sont pensées pour faciliter les points cités ci-dessus.
 
 Le C# est un langage orienté objet. Quatre des techniques clés utilisées dans la programmation orientée objet sont les suivantes :
-- L'__abstraction__ signifie masquer les détails inutiles des consommateurs de type.
 - L’__encapsulation__ signifie qu’un groupe de propriétés, méthodes et autres membres corrélés est traité comme une unité ou un objet unique.
+- L'__abstraction__ signifie masquer les détails inutiles des consommateurs de type.
 - L’__héritage__ décrit la possibilité de créer des classes à partir d’une classe existante.
 - Le __polymorphisme__ signifie que plusieurs classes peuvent être utilisées de manière interchangeable, même si chacune des classes implémente les mêmes propriétés ou méthodes de manière différente.
 
