@@ -16,8 +16,8 @@ Lorsqu'on créé des programmes ils doivent être :
 Les Classes sont le coeur de la programmation orientée objet. Elles utilisent le principe de référence et sont pensées pour faciliter les points cités ci-dessus.
 
 Le C# est un langage orienté objet. Quatre des techniques clés utilisées dans la programmation orientée objet sont les suivantes :
-- L'__abstraction__ signifie masquer les détails inutiles des consommateurs de type.
 - L’__encapsulation__ signifie qu’un groupe de propriétés, méthodes et autres membres corrélés est traité comme une unité ou un objet unique.
+- L'__abstraction__ signifie masquer les détails inutiles des consommateurs de type.
 - L’__héritage__ décrit la possibilité de créer des classes à partir d’une classe existante.
 - Le __polymorphisme__ signifie que plusieurs classes peuvent être utilisées de manière interchangeable, même si chacune des classes implémente les mêmes propriétés ou méthodes de manière différente.
 
@@ -46,16 +46,20 @@ __Attention__
 
 La classe et l’objet sont des concepts liés mais intrinsèquement différents. Par exemple, prenons un objet réel comme une voiture. Le modèle numérique de la voiture décrit sa forme, ses fonctions, comment elle doit être fabriquée. Ce modèle n’est pas une voiture. De la même manière une classe n’est pas un objet.
 
+![René Magritte "La Trahison des Images"](/01_-_Les_Classes/Annexes/ceci-nest-pas-une-pipe.jpg)
+
 ### 2 - Instance d'une Classe -  Type Référence - Null
 
 Lorsqu'on créé une variable de type 'class', cette variable sera obligatoirement une reference vers l'instance créée.
 Lorsqu'on utilise le mot clef 'new' on créé une instance du type de la class.
-On parle aussi d'objet : instance d'une classe == objet d'une class.
-
+On parle aussi d'objet : instance d'une classe == objet d'une classe.
 Un type défini comme class est un type référence. 
-Au moment de l’exécution, quand vous déclarez une variable de type référence, celle-ci contient la valeur Null 
-tant que vous n’avez pas explicitement créé une instance de la classe à l’aide de l’opérateur new, 
-ou que vous ne lui avez pas assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
+
+![Classes et Instances](/01_-_Les_Classes/Annexes/ClasseEtInstance.jpg)
+
+Au moment de l’exécution, quand on déclare une variable de type référence, celle-ci contient la valeur Null 
+tant qu'on a pas explicitement créé une instance de la classe à l’aide de l’opérateur new, 
+ou qu'on ai assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
 
 ```csharp
 // Declaring a reference setted to null. 
@@ -109,24 +113,22 @@ Elle sera dite interne à la Classe et ne pourrat être instancier qu'au travers
 ```csharp
 public class Program
 {
-	static void Main(string[] args)
-	{
-	}
+    static void Main(string[] args)
+    {
+    }
 }
 
 public class Person
 {
-	// Classe interne private (ne peut pas être instancié hors de la classe Person)
-	class InternalPersonPrivate
-	{
+    // Classe interne private (ne peut pas être instancié hors de la classe Person)
+    class InternalPersonPrivate
+    {
+    }
 
-	}
-	
-	// Classe interne public
-	public class InternalPerson
-	{
-
-	}
+    // Classe interne public
+    public class InternalPerson
+    {
+    }
 }
 ```
 
@@ -220,15 +222,15 @@ Les parties get et set d’une propriété ou d’un indexeur sont appelées acc
 ```csharp
 public class MyClass
 {
-	// Nomenclature => '_' devant le nom de la propriété.
-	private string _propsMember;
+    // Nomenclature => '_' devant le nom de la propriété.
+    private string _propsMember;
 
-	// Accesseur de la propriété _propsMember
-	public string PropsMember
-	{
-	    get { return _propsMember; }
-	    set { _propsMember = value; }
-	}
+    // Accesseur de la propriété _propsMember
+    public string PropsMember
+    {
+       get { return _propsMember; }
+       set { _propsMember = value; }
+    }
 }
 
 class Program
