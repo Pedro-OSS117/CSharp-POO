@@ -46,20 +46,20 @@ __Attention__
 
 La classe et l’objet sont des concepts liés mais intrinsèquement différents. Par exemple, prenons un objet réel comme une voiture. Le modèle numérique de la voiture décrit sa forme, ses fonctions, comment elle doit être fabriquée. Ce modèle n’est pas une voiture. De la même manière une classe n’est pas un objet.
 
-![René Magritte « La Trahison des Images »](01_-_Les_Classes/Annexes/ceci-nest-pas-une-pipe.jpg)
-
-![Classes et Instances](/01_-_Les_Classes/Annexes/ClasseEtInstance.jpg)
+![René Magritte "La Trahison des Images"](01_-_Les_Classes/Annexes/ceci-nest-pas-une-pipe.jpg)
 
 ### 2 - Instance d'une Classe -  Type Référence - Null
 
 Lorsqu'on créé une variable de type 'class', cette variable sera obligatoirement une reference vers l'instance créée.
 Lorsqu'on utilise le mot clef 'new' on créé une instance du type de la class.
-On parle aussi d'objet : instance d'une classe == objet d'une class.
-
+On parle aussi d'objet : instance d'une classe == objet d'une classe.
 Un type défini comme class est un type référence. 
-Au moment de l’exécution, quand vous déclarez une variable de type référence, celle-ci contient la valeur Null 
-tant que vous n’avez pas explicitement créé une instance de la classe à l’aide de l’opérateur new, 
-ou que vous ne lui avez pas assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
+
+![Classes et Instances](/01_-_Les_Classes/Annexes/ClasseEtInstance.jpg)
+
+Au moment de l’exécution, quand on déclare une variable de type référence, celle-ci contient la valeur Null 
+tant qu'on a pas explicitement créé une instance de la classe à l’aide de l’opérateur new, 
+ou qu'on ai assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
 
 ```csharp
 // Declaring a reference setted to null. 
