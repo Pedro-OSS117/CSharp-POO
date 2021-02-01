@@ -13,6 +13,7 @@ Un article est caractérisé par son numéro de référence, son nom, son prix d
 
 Pour gérer le stock du magasin, ce dernier se caractérise par son stock d’articles. 
 Le stock est représenté par une collection d’objets Article.
+
 4) Ecrire la classe Stock qui permet de réaliser les fonctionnalités suivantes :
     a. Ajouter un nouvel Article.
     b. Afficher tous les Articles du magasin.
@@ -30,7 +31,10 @@ namespace Exo1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Article a = new Article(404, "cigarette", 1.5f, 450f);
+            Stock stock = new Stock(100);
+            stock.AddArticle(a);
+
         }
     }
 }

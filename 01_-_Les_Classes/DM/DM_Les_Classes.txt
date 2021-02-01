@@ -1,6 +1,6 @@
 ================== Règles =====================
 A Rendre dans un dossier DM dans le dossier 01_-_Les_Classes de votre Git.
-Doit être sur vos GitHub avant 10h Lundi 08 Janvier sinon 0.
+Doit être sur vos GitHub avant 10h Mardi 09 Janvier sinon 0.
 -0.2 points à chaque erreur de nomenclature.
 0 sur l'exo si le programme ne compile pas.
 
