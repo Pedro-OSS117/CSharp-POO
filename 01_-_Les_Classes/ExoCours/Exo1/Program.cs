@@ -31,9 +31,45 @@ namespace Exo1
     {
         static void Main(string[] args)
         {
+            // 1) et 2)
             Article a = new Article(404, "cigarette", 1.5f, 450f);
-            Stock stock = new Stock(100);
+            Article a1 = new Article(52, "viande", 10.50f, 150);
+            Article a2 = new Article(325, "gruyere", 54.5f, 98f);
+
+            // 3)
+            Stock stock = new Stock();
+
+            // 4) a)
             stock.AddArticle(a);
+            stock.AddArticle(a1);
+            stock.AddArticle(a2);
+
+            // 4) b)
+            stock.DisplayAllArticles();
+
+            if(!stock.IsInStock(a))
+            {
+                Console.WriteLine($"{a} n'est pas dans le stock !");
+            }
+
+            // 4) c)
+            Article searchedArticle = stock.FindArticle(404);
+            if(searchedArticle != null)
+            {
+                Console.WriteLine($"{searchedArticle} est pas dans le stock !");
+            }
+
+            // 4) d) 
+            stock.DisplayAllArticlesUpBuyPrice(1000);
+
+            // 4) f)            
+            stock.DisplayAllArticles();
+            stock.RemoveArticle(a);
+            stock.DisplayAllArticles();
+            
+            stock.FindArticle(151515);
+            stock.ModifyArticleSellingPrice(325, 1500);
+            stock.DisplayAllArticles();
 
         }
     }

@@ -31,17 +31,31 @@ namespace Exo1
             _buyPrice = buyPrice;
 
             // Prop selling price
-            if(sellingPrice < _buyPrice)
+            SetSellingPrice(sellingPrice);
+        }
+
+        public int GetRefNum()
+        {
+            return _numRef;
+        }
+
+        public float GetSellingPrice()
+        {
+            return _sellingPrice;
+        }
+
+        public void SetSellingPrice(float newSellingPrice)
+        {
+            if(newSellingPrice < _buyPrice)
             {
-                sellingPrice = _buyPrice;
+                newSellingPrice = _buyPrice;
             }
-            _sellingPrice = sellingPrice;
+            _sellingPrice = newSellingPrice;
         }
 
         public override string ToString()
         {
             return $"Article numero de ref : {_numRef}, nom : {_name}, prix d'achat : {_buyPrice}, prix de vente {_sellingPrice}.";
         }
-
     }
 }
