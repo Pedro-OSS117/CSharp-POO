@@ -211,13 +211,44 @@ public class MyClass
 ```
 
 ### 5 - Variables et Fonctions static d'une classe
-Accessible à l'éxécutioin dès que le type est chargé.
-Pas besoin d'instance pour être utilisées
-On utilise le nom de la classe pour les appeler.
+
+Les classes peuvent avoir des methodes et des variables static. Elles sont :
+- Accessibles à l'éxécution dès que le type est chargé.
+- Pas besoin d'instance pour être utilisées
+- On utilise le nom de la classe pour les appeler.
+
+```csharp
+public class MyClass
+{
+    // Globale au programme lorsque MyClass est chargée 
+    public static string myStaticVar;
+    
+    // Fonction static, utilisable sans instance.
+    // Dans cette portée on a pas accès aux propriétés des instances
+    public static void MyMethodSatic(int param1, float param2)
+    {
+        // Do Something
+    }
+}
+
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        // Je peux appeler ma variable satic sans instance.
+    	MyClass.myStaticVar = "nouvelle valeur";
+	// Je peux appeler ma fonction sans instance.
+	MyClass.MyMethodSatic(10, 1);
+    }
+}
+```
 
 ## IV - Encapsulation et Accesseurs
 https://docs.microsoft.com/fr-fr/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
+
 https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/intro-to-csharp/object-oriented-programming
+
 https://docs.microsoft.com/fr-fr/dotnet/csharp/programming-guide/classes-and-structs/
 
 ### Encapsulation
