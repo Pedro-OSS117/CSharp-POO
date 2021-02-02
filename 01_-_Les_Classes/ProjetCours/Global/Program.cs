@@ -18,6 +18,11 @@ namespace ProjetCours
 
             // Utilisation d'accesseur
             refMyClassInstance.PropsMember = "NewValue";
+
+            // Utilisation des accesseurs
+            Person p = new Person();
+            p.Name = "coucou";
+            string texte = p.Name;
         }
     }
 }

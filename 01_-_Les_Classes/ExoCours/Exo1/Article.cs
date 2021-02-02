@@ -10,21 +10,21 @@ namespace Exo1
         public Article(int numRef, string name, float buyPrice, float sellingPrice)
         {
             // Prop numero de ref
-            if(numRef < 0)
+            if (numRef < 0)
             {
                 numRef = 0;
             }
             _numRef = numRef;
 
             // Prop name 
-            if(string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(name))
             {
                 name = "NAME NOT VALID";
             }
             _name = name;
 
             // Prop buy price
-            if(buyPrice <= 0)
+            if (buyPrice <= 0)
             {
                 buyPrice = 0.1f;
             }
@@ -39,6 +39,19 @@ namespace Exo1
             return _numRef;
         }
 
+        /*public float SellingPrice
+        {
+            get { return _sellingPrice; }
+            set
+            {
+                if (value < _buyPrice)
+                {
+                    value = _buyPrice;
+                }
+                _sellingPrice = value;
+            }
+        }*/
+
         public float GetSellingPrice()
         {
             return _sellingPrice;
@@ -46,7 +59,7 @@ namespace Exo1
 
         public void SetSellingPrice(float newSellingPrice)
         {
-            if(newSellingPrice < _buyPrice)
+            if (newSellingPrice < _buyPrice)
             {
                 newSellingPrice = _buyPrice;
             }
