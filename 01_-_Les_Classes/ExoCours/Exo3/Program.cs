@@ -1,7 +1,7 @@
 ﻿using System;
 
 /* Exo 3
-1 - Creer une classe Rectangle et Ajoutez des attributs à la classe : sa largeur largeur, sa hauteur hauteur en pixel et sa position à l’écran (positionX,positionY) en pixel.
+1 - Creer une classe Rectangle et Ajoutez des attributs à la classe : sa largeur, sa hauteur en pixel et sa position à l’écran (positionX,positionY) en pixel.
 
 2 - Ajoutez un constructeur paramétrique qui initialise la taille et la position de l’objet.
 
@@ -40,7 +40,30 @@ namespace Exo3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Question 4
+            Rectangle rect = new Rectangle(20, 30, 15, 20);
+            Console.WriteLine(rect);
+            Console.WriteLine(rect.Aire());
+
+            // Question 7
+            Rectangle rect2 = new Rectangle();
+            rect2.DoublerTaille();
+            Console.WriteLine(rect2);
+
+            // Question 9             
+            Console.WriteLine(rect2.IsLittleThan(rect));
+
+            // Question 10
+            Rectangle rect3 = rect.Copy();
+            Rectangle rect4 = new Rectangle(rect2);
+
+            // Question 11
+            rect3.DoublerTaille();
+            rect4.DoublerTaille();
+            Console.WriteLine(rect);
+            Console.WriteLine(rect2);
+            Console.WriteLine(rect3);
+            Console.WriteLine(rect4);
         }
     }
 }
