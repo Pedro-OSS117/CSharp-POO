@@ -212,6 +212,8 @@ public class MyClass
 
 ### 5 - Variables et Fonctions static d'une classe
 
+https://openclassrooms.com/fr/courses/218202-apprenez-a-programmer-en-c-sur-net/216869-les-classes-2-2
+
 Les classes peuvent avoir des methodes et des variables static. Elles sont :
 - Accessibles à l'éxécution dès que le type est chargé.
 - Pas besoin d'instance pour être utilisées
