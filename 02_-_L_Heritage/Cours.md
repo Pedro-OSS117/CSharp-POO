@@ -32,7 +32,7 @@ L’héritage est une approche puissante pour la structuration des programmes et
 Comme toute technique de réutilisation, elle facilite la maintenance et améliore la productivité. 
 De plus, la structuration du programme induite par l’utilisation du mécanisme d’héritage facilite grandement la compréhension. 
 
-## 2 - Heritage - Les Mots Clefs - ':', protected, override, abstract, virtual
+## 2 - Heritage - Les Mots Clefs - ':', protected, override, virtual
 
 ### ':'
 
@@ -66,6 +66,35 @@ public class B : A
         // myPropsAPrivate = 10; // ERROR
         // Mais accès à la prop myPropsAProtected car protected
         myPropsAProtected = 10;
+    }
+}
+```
+
+### override, virtual, base
+
+- __override__ permet de __redefinir__ ou __surcharger_ le corps d'une des methodes des __classes mères__ qui est soit __virtual__ ou __abstract__.
+- __virtual__ permet de définir une methode qui pourrat être __override__ par les classes filles .
+- __base__ permet d'appeler des methodes membres de la classe mère.
+
+```csharp
+public class A
+{
+    // Definition d'une methode qui sera surchargeable par les classes filles
+    public virtual void MyMethod()
+    {
+
+    }
+}
+
+public class B : A
+{
+    public override void MyMethod()
+    {
+        // Ici je peux implementer la method MyMethod
+        // Lorsque MyMethod sera appelée via une instance de classe B, ce sera cette implementation qui sera appelée.
+
+        // Je peux utiliser le mot clef 'base' pour appeler le comportement de la classe mère
+        base.MyMethod();
     }
 }
 ```
@@ -112,9 +141,3 @@ Voici trois méthodes de test d’égalité de deux objets :
 
 ![Heritage Implicite - Classe Object](/02_-_L_Heritage/Annexes/ClasseObject.jpg)
 
-### 4 - Exemples d'heritage - Concept et classe fille
-
-Animal ->
-Vehicle ->
-Shape ->
-Account ->
