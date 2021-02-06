@@ -32,9 +32,9 @@ L’héritage est une approche puissante pour la structuration des programmes et
 Comme toute technique de réutilisation, elle facilite la maintenance et améliore la productivité. 
 De plus, la structuration du programme induite par l’utilisation du mécanisme d’héritage facilite grandement la compréhension. 
 
-## 2 - Heritage - Les Mots Clefs - ':', protected, override, virtual
+## 2 - Heritage - Les Mots Clefs - ':', protected, override, virtual et base
 
-### ':'
+### L'operateur ':'
 
 L'operateur ':' permet de definir quelle est la classe mère.
 Si B hérite de A alors on ecrit __public class B : A__
