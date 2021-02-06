@@ -10,16 +10,18 @@ namespace ProjetCours
             // myPropsAPrivate = 10; // ERROR
             // Mais accès à la prop myPropsAProtected car protected
             myPropsAProtected = 10;
+            
+            Console.WriteLine("Call MyBMethod in MyChildClass myPropsAProtected : " + myPropsAProtected);
         }
 
         public override void MyMethodPublic()
         {
-            Console.WriteLine("Call MyMethodPublic in MyClass");
+            Console.WriteLine("Call MyMethodPublic in MyChildClass");
         }
 
         protected override void MyMethodProtected()
         {
-            Console.WriteLine("Call MyMethodProtected in MyClass");
+            Console.WriteLine("Call MyMethodProtected in MyChildClass");
         }
         
         public override string ToString()

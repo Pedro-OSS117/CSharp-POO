@@ -16,6 +16,11 @@ namespace ProjetCours
             {
                 Console.WriteLine(instance);
                 instance.MyMethodPublic();
+
+                if(instance is MyChildClass instanceMyChildClasse)
+                {
+                    instanceMyChildClasse.MyBMethod();
+                }
             }
         }
     }
