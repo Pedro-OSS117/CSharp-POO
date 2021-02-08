@@ -45,6 +45,7 @@ public class B : A
 
 }
 ```
+IMPORTANT : Une classe peut dériver que d'une seule classe à la fois !
 
 ### protected
 
