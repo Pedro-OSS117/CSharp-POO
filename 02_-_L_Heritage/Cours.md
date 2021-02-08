@@ -12,8 +12,8 @@ L’héritage permet de construire une classe B à partir d’une classe existan
 Il s’agit d’une sorte d’héritage biologique. La classe B va ainsi hériter des variables, des méthodes, bref de tous les membres de A puis, 
 on va ajouter des éléments supplémentaires propres à la classe B.
 
-Si B hérite de A, on dit que B est une __classe fille__, une __sous-classe__, une __classe enfant__ ou encore une __classe dérivée__ de A.
-A l’inverse, A se nomme la __classe mère__, la __classe de base__, la __classe parent__ ou encore la __super classe__ de B.
+- Si B hérite de A, on dit que B est une __classe fille__, une __sous-classe__, une __classe enfant__ ou encore une __classe dérivée__ de A.
+- A l’inverse, A se nomme la __classe mère__, la __classe de base__, la __classe parent__ ou encore la __super classe__ de B.
 
 On peut examiner l’héritage de deux façons différentes :
 
