@@ -46,7 +46,7 @@ La fonction doit verifier qu'il y a bien de la place disponible.
 
 d) Ajouter une fonction qui supprime une voiture du parking (suppression de la collection).
 
-f) Ajouer une fonction qui retourne le nombre de places disponibles.
+f) Ajouter une fonction qui retourne le nombre de places disponibles.
 
 g) Ajouter une fonction qui permet d'ajouter de l'argent dans la variable de l'argent gagné. 
 La fonction prend en paramètre une variable de type DateTime.

@@ -17,7 +17,7 @@ namespace ParkingManager
             int endOptions = 4;
             while (options != endOptions)
             {
-                string message = "\n============== PARKING ================\n"; 
+                string message = "\n============== PARKING ================\n";
                 message += $"Number parks taken {parking.GetSpacesAvailable()} / {parking.GetNbrSpaces()}\n";
                 message += $"Number tickets pending {clients.GetNumberTickets()}\n\n";
                 message += optionsMessage;
@@ -30,7 +30,13 @@ namespace ParkingManager
                     Car car = new Car(nameOwner);
                     if (parking.AddCar(car))
                     {
+                        Console.WriteLine($"Thanks to park your car {car.OwnerName} !");
+
                         clients.AddTicket(car);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry no space available - try later.");
                     }
                 }
                 else if (options == 2)
@@ -44,7 +50,7 @@ namespace ParkingManager
                         clients.RemoveTicket(ticket);
                     }
                 }
-                else if(options == 3)
+                else if (options == 3)
                 {
                     parking.DisplayParkingState();
                 }
