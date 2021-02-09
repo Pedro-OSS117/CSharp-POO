@@ -102,6 +102,30 @@ public class B : A
 
 ### 'is'
 
+Le mot clef 'is' permet de tester le type d'une variable.
+
+```csharp
+
+MyClass varMyClass = new MyClass();
+MyChildClass varMyChildClass = new MyChildClass();
+
+MyClass[] varTab = new MyClass[] { varMyClass, varMyChildClass};
+foreach(MyClass var in varTab)
+{
+    var.MyMethodMother();
+
+    if(var is MyChildClass)
+    {
+        // Besoin d'une variable de type MyChildClass pour appeler
+        // le comportement specifique de MyChildClass.
+        // var.MyMethodSpecificFille1();
+
+        MyChildClass tmpMyChildClass = (MyChildClass)var;
+        tmpMyChildClass.MyMethodSpecificFille1();
+    }
+}
+```
+
 ## 3 - Heritage Implicite - Classe Object
 
 - https://docs.microsoft.com/fr-fr/dotnet/api/system.object?view=net-5.0
