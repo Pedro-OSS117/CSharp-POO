@@ -100,6 +100,8 @@ public class B : A
 }
 ```
 
+### 'is'
+
 ## 3 - Heritage Implicite - Classe Object
 
 - https://docs.microsoft.com/fr-fr/dotnet/api/system.object?view=net-5.0
