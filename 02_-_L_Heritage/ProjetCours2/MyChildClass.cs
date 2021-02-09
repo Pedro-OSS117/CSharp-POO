@@ -22,7 +22,13 @@ namespace ProjetCours2
 
         public override void MyMethodMother()
         {
-            Console.WriteLine("Coucou je suis la fille !");
+            base.MyMethodMother();
+            Console.WriteLine("Coucou je suis la fille 1 !");
+        }
+
+        public void MyMethodSpecificFille1()
+        {
+            Console.WriteLine("Je suis le comportement specifique de la classe fille 1 !");
         }
     }
 }

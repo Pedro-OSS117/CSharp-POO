@@ -31,5 +31,13 @@ namespace ProjetCours2
             Console.WriteLine("Coucou je suis la mother !");
         }
 
+        public override bool Equals(object obj)
+        {
+            if(obj is MyClass varMyClass)
+            {
+                return this._myVarPrivate == varMyClass._myVarPrivate;
+            }
+            return false;
+        }
     }
 }

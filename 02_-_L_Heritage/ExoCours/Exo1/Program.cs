@@ -37,7 +37,34 @@ namespace Exo1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Circle circle1 = new Circle(4.5f);
+            Square square1 = new Square(6);
+            Rectangle rectangle1 = new Rectangle(3.5f, 6.2f);
+
+            Shape[] shapes = new Shape[] { circle1, square1, rectangle1 };
+
+            for (int i = 0; i < shapes.Length; i++)
+            {
+                Console.WriteLine(shapes[i] + $" de périmetre {shapes[i].Perimeter()} et d'aire {shapes[i].Area()}");
+
+                if(shapes[i] is Circle)
+                {
+                    Circle tmpCircle = (Circle)shapes[i];
+                    Console.WriteLine(shapes[i] + $" de diametre {tmpCircle.Diameter()}");
+                }
+                else if(shapes[i] is Rectangle)
+                {
+                    Rectangle tmpRectangle = (Rectangle)shapes[i];
+                    Console.WriteLine(shapes[i] + $" de diagonale {tmpRectangle.Diagonal()}");
+                }
+                else if(shapes[i] is Square)
+                {
+                    Square tmpSquare = (Square)shapes[i];
+                    Console.WriteLine(shapes[i] + $" de diagonale {tmpSquare.Diagonal()}");
+                }
+                Console.WriteLine(shapes[i].DisplayShape());
+            }
+
         }
     }
 }
