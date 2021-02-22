@@ -18,7 +18,7 @@ Une classe abstraite ne peut être utilisée que si une nouvelle classe en est d
 
 Exemples de concepts VS objets "rééls":
 
-- Vehicule       VS     Camion, Vélo, Camion, etc
+- Vehicule       VS     Voiture, Vélo, Camion, etc
 - Figure         VS     Square, Circle, etc
 - Documents      VS     Livre, Roman, Revue, Article, etc
 - CompteBancaire VS     Compte Epargne, Compte Courant, etc
