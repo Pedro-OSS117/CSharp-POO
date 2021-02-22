@@ -8,8 +8,6 @@ References :
 
 ## 1 - Qu'est ce que l'Abstraction en POO
 
-L' abstraction signifie masquer les détails inutiles des consommateurs de type.
-
 L'abstraction permet d'élaborer un concept sous forme de classe qui ne pourrat pas être instancier.
 Le concept définis des comportements (méthodes) mais ne les implémentes pas.
 Ensuite des classes representant des cas concrets deriverons de ce concept et
