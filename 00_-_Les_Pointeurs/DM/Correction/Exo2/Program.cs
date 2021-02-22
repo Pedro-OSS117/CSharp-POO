@@ -43,9 +43,9 @@ namespace Exo2
         static void Main(string[] args)
         {
             Boss boss = new Boss(50, 1.2f);
-
-            Player p1 = new Player();
-            Player p2 = new Player();
+            
+            Player p1 = new Player("Bob", 15, &boss);
+            Player p2 = new Player("Alice", 30, &boss);
             
             p1.Attack();
             p2.Attack();
