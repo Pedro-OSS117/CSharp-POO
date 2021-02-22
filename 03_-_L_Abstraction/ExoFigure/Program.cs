@@ -41,7 +41,7 @@ namespace Exo1
             Square square1 = new Square(6);
             Rectangle rectangle1 = new Rectangle(3.5f, 6.2f);
 
-            Shape[] shapes = new Shape[] { circle1, square1, rectangle1 };
+            Shape[] shapes = new Shape[] { circle1, square1, rectangle1, new Hexagon() };
 
             for (int i = 0; i < shapes.Length; i++)
             {

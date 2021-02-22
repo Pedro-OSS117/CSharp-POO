@@ -2,19 +2,13 @@ using System;
 
 namespace Exo1
 {
-    public class Shape
+    public abstract class Shape
     {
         protected char mainChar = '*';
 
-        public virtual float Area()
-        {
-            return 0;
-        }
+        public abstract float Area();
 
-        public virtual float Perimeter()
-        {
-            return 0;
-        }
+        public abstract float Perimeter();
 
         // Fonction generique de creation de ligne avec le même caractère.
         protected string ToStringLineChar(int numberLineChar, char symbol)

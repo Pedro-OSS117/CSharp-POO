@@ -1,7 +1,13 @@
 ﻿using System;
 
 /*
-On désir réaliser une application de gestion de comptes bancaires. Pour cela on a proposé d’organiser les objets de l’application en deux catégories (CompteSurCarnet et CompteSurCheque) et de les ranger dans une collection. Les classes CompteSurCarnet et CompteSurCheque ont des propriétés communes telles que Numéro et NomProprietaire et Solde qui donnent naissance à une troisième classe Compte considérée comme classe de base pour éviter les redondances. La classe CompteSurCarnet possède, en plus des propriétés communes, la propriété NuméroCanret. La classe CompteSurCheque est caractérisée par le NuméroChèque et le NuméroCarte ainsi que DateFinValiditéCarte.
+On désir réaliser une application de gestion de comptes bancaires.
+Pour cela on a proposé d’organiser les objets de l’application en deux catégories (CompteSurCarnet et CompteSurCheque) et de les ranger dans une collection. 
+Les classes CompteSurCarnet et CompteSurCheque ont des propriétés communes telles que Numéro et NomProprietaire et Solde qui donnent naissance à une troisième classe Compte 
+considérée comme classe de base pour éviter les redondances.
+
+La classe CompteSurCarnet possède, en plus des propriétés communes, la propriété NuméroCanret. 
+La classe CompteSurCheque est caractérisée par le NuméroChèque et le NuméroCarte ainsi que DateFinValiditéCarte.
 
 1) Définir la classe abstraite AbstractCompte avec deux constructeurs (par défaut et d’initialisation) et les accesseurs.
          a. Ajouter deux méthodes abstraites créditer et Débiter qui prend en paramètre la somme à ajouter au compte ou à retirer du compte. 
