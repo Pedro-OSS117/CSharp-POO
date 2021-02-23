@@ -6,8 +6,6 @@
 . 0 sur l'exo si le programme ne compile pas.
 . note exo divisée par 2 si l'exo plante à l'éxécution.
 
-http://timmi.e-monsite.com/pages/langage-c-1/exercices-1.html
-
 ================= Gestion de Convoi de véhicules ==================
 
 Une entreprise développe un moteur à huile de rutabaga et dote plusieurs véhicules de ce moteur.
@@ -30,4 +28,40 @@ Sa vitesse maximale dépend de son poids total :
 90 km/h si le poids total est superieur à 4 tonnes et inferieur ou égal à 7 tonnes.
 80 km/h si le poids total est supérieur à 7 tonnes.
 
-- un camion baché a un poids à vide de 4 tonnes
+- un camion baché a un poids à vide de 4 tonnes et une charge maximum de 20 tonnes. Sa vitesse maximale dépend également de sa charge
+(mais à charge égale, un camion citerne a une vitesse maximale plus faible, car le liquide qu'il transporte est plus instable qu'un chargement soldie) :
+130 km/h si le poids total est de 4 tonnes.
+110 km/h si le poids total est superieur à 4 tonnes et inferieur ou égal à 7 tonnes.
+90 km/h si le poids total est superieur à 7 tonnes et inferieur ou égal à 11 tonnes.
+80 km/h si le poids total est supérieur à 11 tonnes et inferieur ou égal à 14 tonnes.
+70 km/h si le poids total est supérieur à 14 tonnes.
+
+I - Représentation des véhicules
+
+Ecrire une hiérarchie de classses permettant de représenter les différents types de véhicules.
+1) La classe Vehicule est la classe de base. Elle possède deux attributs déclarés en private, le numéro d'immatriculation du véhicule et sa vitesse maximale.
+2) Les différents types de véhicules sont PetitBus, CamionBache et CamionCiterne et héritent de la classe Vehicule.
+(CamionBache et CamionCiterne peuvent hériter d'une classe intermediaire Camion).
+3) Le poids à vide de chaque type de véhicule sera déclaré sous forme de constante statique privée dans la classe appropriée.
+//4) Un fonction statique dans chaque classe appropriée permettra d'obtenir la vitesse max en fonction d'un poids passé en paramètre.
+
+5) La hierarchie fournira les méthodes publiques suivantes :
+- un constructeur pour chaque classe. A sa création, un véhicule reçoit un numéro d'immatriculation unique.
+- une méthode ToString() qui retourne une chaine de caractère décrivant un véhicule avec les éléments suivants :
+l'immatriculation, le poids à vide et, le cas échéant, la charge maximale et la charge du véhicule.
+- une méthode SetCharge(int charge) permettant de modifier le  poids du chargement.
+- La vitesse maximale à vide d'un véhicule doit être calculée lors de sa création, on considère alors que la valeur de la charge est 0.
+Cette vitesse maximale doit être recalculée à chque fois que l'on change le chargement d'un véhicule.
+Une méthode VitesseMaxByCharge() déclarée en abstract pour obtenir la vitesse max en fonction du chargement.
+Une méthode VitessMax() déclarée en abstract dans la classe Vehicule permet de calculer cette vitesse.
+
+II Representation d'un convoi
+
+On s'intéresse maintenant à la définition d'une classe Convoi, permettant de gérer un convoi de véhicules.
+Cette classe doit savoir calculer la vitesse maximale d'une convoi, sachant que cette vitesse correspond à la plus petite des vitesses maximales des véhicules du convoi.
+
+1) Définir un ou des attributs de la clase Convoi permettant de représenter les véhicules d'un convoi.
+On supposera qu'au cours de la vie d'un objet instance de la classe Convoi, on ne modifie pas le convoi de véhicules.
+(en particulier, le chargement des véhicules ne change pas).
+
+2) Ecrire les méthodes suivantes : 

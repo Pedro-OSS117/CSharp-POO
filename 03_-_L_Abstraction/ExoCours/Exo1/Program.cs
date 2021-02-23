@@ -34,7 +34,9 @@ namespace Exo1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            Random rand = new Random();
+            Console.WriteLine(rand.Next(1,10));
         }
     }
 }

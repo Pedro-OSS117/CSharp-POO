@@ -63,5 +63,21 @@ namespace Exo1
             NameOwner = nameOwner;
             Solde = solde;
         }
+
+        public virtual void Crediter(float sommeAjoutee)
+        {
+            _solde += sommeAjoutee;
+        }
+
+        public virtual bool Debiter(float sommeDebitee)
+        {
+            if(_solde >= sommeDebitee)
+            {
+                _solde -= sommeDebitee;
+                return true;
+            }
+            return false;
+        }
+
     }
 }
