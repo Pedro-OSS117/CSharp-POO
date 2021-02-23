@@ -15,5 +15,10 @@ namespace Exo2
         {
             _reward = reward;
         }
+
+        public override string ToString()
+        {
+            return  base.ToString() + $", Reward : {_reward}";
+        }
     }
 }

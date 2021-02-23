@@ -11,5 +11,15 @@ namespace Exo2
         }
 
         private Language _language;
+
+        public Dictionary(int registerNumber, string title, Language language) : base(registerNumber, title)
+        {
+            _language = language;
+        }
+
+        public override string ToString()
+        {
+            return  base.ToString() + $", Language : {_language}";
+        }
     }
 }

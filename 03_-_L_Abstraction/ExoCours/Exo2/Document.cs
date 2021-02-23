@@ -11,5 +11,10 @@ namespace Exo2
             _registerNumber = registerNumber;
             _title = title;
         }
+
+        public override string ToString()
+        {
+            return $"Register Number : {_registerNumber}, Titre : {_title}";
+        }
     }
 }
