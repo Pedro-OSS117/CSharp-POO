@@ -1,0 +1,33 @@
+================== Règles =====================
+. A Rendre dans un dossier DM dans le dossier 01_-_Les_Classes de votre Git.
+. Doit être sur vos GitHub avant 14h Lundi 01 Mars sinon 0.
+. -1 points à chaque erreur de nomenclature.
+. -5 si pas de commentaires et -2 si les commentaires ne sont pas exaustifs
+. 0 sur l'exo si le programme ne compile pas.
+. note exo divisée par 2 si l'exo plante à l'éxécution.
+
+http://timmi.e-monsite.com/pages/langage-c-1/exercices-1.html
+
+================= Gestion de Convoi de véhicules ==================
+
+Une entreprise développe un moteur à huile de rutabaga et dote plusieurs véhicules de ce moteur.
+Avant d'effectuer des tests grandeur nature, l'entreprise conçoit un programme de simulation du comportement des véhicules.
+Le programme doit proposer une représentation des véhicules et du calcul de la vitesse maximum pouvant être atteinte par véhicule.
+
+Tout véhicule possède une immatriculation (propre à chaque véhicule) et un poids à vide (propre à chaque type de véhicule).
+Certains véhicules peuvent transporter un chargement. On appelle alors charge le poids de ce chargement. 
+La charge d'un véhicule ne doit pas dépasser un certaine poids, que l'on appelera charge maximale, dépendant du type de véhicule.
+
+Les différents types de véhicules dotés du fameux moteur sont les suivants : les petits bus, les camions citernes, et les camions bachés.
+
+- un petit bus a un poids à vide de 4 tonnes, et peut atteindre une vitesse maximale de 150 km/h.
+Il ne possède pas de chargement (le poid des passagers est concidéré comme négligeable par rapport au poid à vide).
+
+- un camion citerne a un poids à vide de 3 tonnes et une charge maximale de 10 tonnes. 
+Sa vitesse maximale dépend de son poids total :
+130 km/h si le poids total est de 3 tonnes.
+110 km/h si le poids total est superieur à 3 tonnes et inferieur ou égal à 4 tonnes.
+90 km/h si le poids total est superieur à 4 tonnes et inferieur ou égal à 7 tonnes.
+80 km/h si le poids total est supérieur à 7 tonnes.
+
+- un camion baché a un poids à vide de 4 tonnes

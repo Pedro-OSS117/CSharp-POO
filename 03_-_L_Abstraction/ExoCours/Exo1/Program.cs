@@ -28,7 +28,7 @@ La classe CompteSurCheque est caractérisée par le NuméroChèque et le Numéro
          e. La propriété Elément : qui prend en paramètre un numéro et retourne le compte correspondant à ce numéro.
 */
 
-namespace Exo2
+namespace Exo1
 {
     class Program
     {
